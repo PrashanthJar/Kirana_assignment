@@ -2,17 +2,10 @@ package com.KiranaStore.KiranaStore.service;
 
 import com.KiranaStore.KiranaStore.Response.ReportResponse;
 
-public class ReportService {
+public interface ReportService {
+    ReportResponse getWeeklyTransaction();
 
-    public ReportResponse getWeeklyTransaction() {
-        return null;
-    }
+    ReportResponse getMonthlyTransaction();
 
-    public ReportResponse getMonthlyTransaction() {
-        return null;
-    }
-
-    public ReportResponse getYearlyTransaction() {
-        return null;
-    }
+    ReportResponse getYearlyTransaction();
 }
