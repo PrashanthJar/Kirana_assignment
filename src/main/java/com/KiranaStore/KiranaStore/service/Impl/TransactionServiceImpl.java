@@ -37,7 +37,7 @@ public class TransactionServiceImpl implements TransactionService {
         Double exchangeValue = rates.get(currency);
         float currencyToDollar = (float) (amount/exchangeValue);
         System.out.println("currency converted to dollar value is " + currencyToDollar);
-        Transaction request = new Transaction(id, type, timeStamp,amount, currency, currencyToDollar);
+        Transaction request = new Transaction(id, type,amount,timeStamp, currency, currencyToDollar);
         return myTrans.save(request);
     }
 }

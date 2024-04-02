@@ -1,6 +1,5 @@
 package com.KiranaStore.KiranaStore.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
@@ -17,19 +16,17 @@ public class Transaction {
     private String id;
     private String type;
     private float amount;
-    private String currency;
     private LocalDateTime timeStamp;
+    private String currency;
+    private float amountToDollar;
 
-
-    public Transaction(String id, String type, LocalDateTime timeStamp, float amount, String currency) {
+    public Transaction(String id, String type, float amount, LocalDateTime timeStamp, String currency, float amountToDollar) {
         this.id = id;
         this.type = type;
         this.amount = amount;
-        this.currency = currency;
         this.timeStamp = timeStamp;
-
-
+        this.currency = currency;
+        this.amountToDollar = amountToDollar;
     }
-
 }
 
