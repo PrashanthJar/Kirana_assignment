@@ -1,6 +1,6 @@
 package com.KiranaStore.KiranaStore.service;
 
-import com.KiranaStore.KiranaStore.dto.ExchangeRateResponse;
+import com.KiranaStore.KiranaStore.Response.ExchangeRateResponse;
 import com.KiranaStore.KiranaStore.model.CurrencyExchangeRate;
 import com.KiranaStore.KiranaStore.repository.CurrencyExchangeRateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
