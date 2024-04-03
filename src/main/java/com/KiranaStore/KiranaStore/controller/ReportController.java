@@ -5,7 +5,11 @@ import com.KiranaStore.KiranaStore.service.ReportService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+@RestController
+@RequestMapping("/report")
 public class ReportController {
     public final ReportService reportService;
 
@@ -20,14 +24,12 @@ public class ReportController {
 
 
         @GetMapping("/Monthly")
-        public ResponseEntity<ReportResponse> getMontly(){
-            System.out.println("inside Monthly report");
+        public ResponseEntity<ReportResponse> getMonthly(){
             return new ResponseEntity<ReportResponse>(reportService.getMonthlyTransaction(), HttpStatus.CREATED);
         }
 
         @GetMapping("/Yearly")
         public ResponseEntity<ReportResponse> getYearly(){
-            System.out.println("inside Yearly report");
             return new ResponseEntity<ReportResponse>(reportService.getYearlyTransaction(), HttpStatus.CREATED);
 
         }
